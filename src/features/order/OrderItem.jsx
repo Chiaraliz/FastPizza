@@ -8,6 +8,7 @@ function OrderItem({ item, isLoadingIngredients, ingredients }) {
       <div className="flex sm:items-center sm:justify-between sm:flex-row flex-col">
         <p>
           <span className="font-bold">{quantity}&times;</span> {name}
+          <p>{isLoadingIngredients ? "loading..." : ingredients.join(",")}</p>
         </p>
         <p className="text-sm font-bold">{formatCurrency(totalPrice)}</p>
       </div>
